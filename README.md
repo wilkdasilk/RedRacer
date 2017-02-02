@@ -21,5 +21,5 @@ a stopwatch for tracking your best time across multiple games
 upgrading your racer to different shapes - perhaps triangle?
 
 ## Link
-(https://github.com/wilkdasilk/RedRacer/blob/master/develop/imgs/RedRacer_Screenshot.png?raw=true)
+![Screenshot of Red Racer](https://github.com/wilkdasilk/RedRacer/blob/master/develop/imgs/RedRacer_Screenshot.png?raw=true)
 [Download Red Racer!](https://github.com/wilkdasilk/RedRacer)
