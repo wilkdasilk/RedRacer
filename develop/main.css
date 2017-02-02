@@ -64,3 +64,13 @@ body {
   height:400px;
 
 }
+
+.red{
+  color:red;
+}
+.green{
+  color:rgb(50,255,50);
+}
+.instructions{
+  margin-bottom:20px;
+}
