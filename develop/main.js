@@ -52,6 +52,8 @@ $(document).ready(function(){
           //if win, reset button appears
           if(didWin(player1)){
             resetDiv.css("visibility", "visible");
+            //listen for enter
+            $('body').keydown(catchEnter);
             //update score
             redScore++;
             }
@@ -74,7 +76,10 @@ $(document).ready(function(){
          didWin(player2);
          //if win, reset button appears
          if(didWin(player2)){
+           //display reset
            resetDiv.css("visibility", "visible");
+           //listen for enter
+           $('body').keydown(catchEnter);
            //update score
            greenScore++;
 
@@ -84,11 +89,15 @@ $(document).ready(function(){
 
  })
  //when click reset
- resetDiv.on('click', function resetGame(){
+ resetDiv.on('click', resetGame);
+
+
+ function resetGame(){
    //original style and classes
    $('.player').attr("style", "left: 0px;");
    statusDiv.html("<p>start!</p>");
    resetDiv.css("visibility", "hidden");
+   $('body').unbind("keydown", catchEnter);
    //show new score
    $(".score").css('visibility', "visible");
    $('.score.green').text(greenScore);
@@ -97,6 +106,12 @@ $(document).ready(function(){
 
    need1 =83;
    need2=74;
- })
+ };
+
+ function catchEnter(event) {
+   if (event.which ===13){
+     resetGame();
+   }
+ }
 
 });
